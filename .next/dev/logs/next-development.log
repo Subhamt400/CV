@@ -1,8 +1,0 @@
-[00:00:06.035] Server  LOG      ✓ Ready in 5s
-[00:00:11.895] Server  LOG      ○ Compiling / ...
-[00:00:32.265] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/rc-project.png" "received" null
-[00:00:32.299] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/glove-project.png" "received" null
-[00:00:32.302] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/project2.png" "received" null
-[00:00:32.394] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/project1.png" "received" null
-[00:00:32.434] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/java-code.png" "received" null
-[00:00:33.480] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
