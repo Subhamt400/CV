@@ -5,7 +5,7 @@ Minimal, dark-mode-first developer portfolio scaffold using Next.js 16 (App Rout
 Quick start
 
 ```bash
-cd /Users/abcd/Desktop/Develop/CV
+cd ~/CV
 npm install
 npm run dev
 ```
