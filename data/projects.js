@@ -7,8 +7,8 @@ export const projects = [
     description: "A fully functional, live website developed for a client. Built with a custom PHP backend and optimized MySQL database to handle real-time user data and transactions.",
     techStack: ["PHP", "MySQL", "JavaScript", "HTML5", "CSS3"],
     liveLink: "https://your-client-website-1.com", // REPLACE THIS
-    repoLink: null, // Keep null if code is private/client property
-    image: "/images/project1.png", // You will need to add screenshots to public/images/
+    repoLink: null,
+    image: "/images/project1.png",
   },
   {
     id: 2,
@@ -22,32 +22,32 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Assistive IoT Communication Glove",
-    category: "Embedded Systems",
-    description: "A smart glove designed to help non-verbal individuals communicate. Uses flex sensors to detect hand gestures and converts them into spoken audio via an Arduino Nano.",
-    techStack: ["Arduino", "C++", "Sensors", "IoT"],
+    title: "IoT Sensor Dashboard",
+    category: "IoT & Web Development",
+    description: "A full-stack monitoring system for ESP8266 devices. Features a secure PHP backend with authentication, a responsive Bootstrap 5 dashboard, and real-time data visualization.",
+    techStack: ["PHP", "MySQL", "Bootstrap 5", "ESP8266", "REST API"],
     liveLink: null,
-    repoLink: "https://github.com/yourusername/glove-project", // REPLACE THIS
-    image: "/images/glove-project.png",
+    repoLink: "https://github.com/Subhamt400/ESP-IoT-Monitor",
+    image: "/images/iot-dashboard.png", // Don't forget to add a screenshot here
   },
   {
     id: 4,
-    title: "10-Channel RC Transmitter",
-    category: "Hardware",
-    description: "A custom-built remote control transmitter using the ESP-WROOM-32. Handles complex signal processing for long-range drone/vehicle control.",
-    techStack: ["ESP32", "C++", "Wireless Comm", "Electronics"],
+    title: "ESP8266 Gemini AI Client",
+    category: "AI & Embedded Systems",
+    description: "An AI-powered chatbot running on a microcontroller. Connects directly to Google's Gemini API via HTTPS to answer questions on the Serial Monitor using ArduinoJson.",
+    techStack: ["C++", "Google Gemini API", "ESP8266", "ArduinoJson"],
     liveLink: null,
-    repoLink: "https://github.com/yourusername/rc-transmitter",
-    image: "/images/rc-project.png",
+    repoLink: "https://github.com/Subhamt400/ESPGemini",
+    image: "/images/gemini-client.png", // Don't forget to add a screenshot here
   },
   {
     id: 5,
-    title: "Java Data Structures Library",
-    category: "Computer Science",
-    description: "A comprehensive library implementing core data structures (Linked Lists, Trees, Graphs) from scratch to demonstrate algorithmic efficiency.",
-    techStack: ["Java", "Algorithms", "Data Structures"],
+    title: "HTTPS Random Number Fetcher",
+    category: "Embedded Systems",
+    description: "A technical demonstration of handling secure HTTPS GET requests on ESP8266. Fetches and parses JSON data from a remote PHP endpoint without heavy libraries.",
+    techStack: ["C++", "ESP8266", "HTTPS", "API Integration"],
     liveLink: null,
-    repoLink: "https://github.com/yourusername/ds-library",
-    image: "/images/java-code.png",
+    repoLink: "https://github.com/Subhamt400/ESP8266",
+    image: "/images/https-fetcher.png", // Don't forget to add a screenshot here
   }
 ];
