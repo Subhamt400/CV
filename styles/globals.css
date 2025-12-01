@@ -1,103 +1,85 @@
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Rajdhani:wght@400;500;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
-  /* Cyberpunk Palette */
-  --bg-dark: #050505;
-  --neon-cyan: #00f3ff;
-  --neon-pink: #bc13fe;
-  --neon-green: #0aff0a;
-  --text-main: #e0faff;
-  
-  /* Component Vars */
-  --card-bg: rgba(5, 5, 5, 0.7);
-  --card-border: var(--neon-cyan);
+  /* Light mode (default) */
+  --bg: #0f1724; /* use slate-900 as base dark background for premium look */
+  --text: #e6eef8;
+  --muted: #94a3b8;
+  --card: #0b1220;
+  --card-border: rgba(255,255,255,0.04);
+  --header-bg: rgba(255,255,255,0.03);
+  --header-border: rgba(255,255,255,0.04);
 }
 
-/* Base Body Styles */
+/* `.light` can be used if needed to force a light theme; default stays dark for this portfolio */
+.light {
+  --bg: #f8fafc;
+  --text: #0f1724;
+  --muted: #6b7280;
+  --card: #ffffff;
+  --card-border: rgba(2,6,23,0.06);
+  --header-bg: rgba(2,6,23,0.04);
+  --header-border: rgba(2,6,23,0.06);
+}
+
+html, body, #__next {
+  height: 100%;
+}
+
 body {
-  @apply antialiased text-slate-100;
-  background-color: var(--bg-dark);
-  color: var(--text-main);
-  font-family: 'Share Tech Mono', monospace; /* Techy font */
-  overflow-x: hidden;
-  
-  /* Cyberpunk Grid Background */
-  background-image: 
-    linear-gradient(rgba(0, 243, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 243, 255, 0.1) 1px, transparent 1px);
-  background-size: 40px 40px;
-  background-position: center top;
+  @apply antialiased bg-slate-900 text-slate-100;
+  background-color: var(--bg);
+  color: var(--text);
+  background-image: radial-gradient(1200px 600px at 10% 10%, rgba(124,58,237,0.04), transparent);
+  transition: background-color 220ms cubic-bezier(.2,.9,.2,1), color 220ms cubic-bezier(.2,.9,.2,1);
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  font-weight: 400;
 }
 
-/* CRT Scanline Animation Effect */
-body::after {
-  content: "";
-  position: fixed;
-  top: 0; left: 0; width: 100vw; height: 100vh;
-  background: linear-gradient(
-    rgba(18, 16, 16, 0) 50%, 
-    rgba(0, 0, 0, 0.25) 50%
-  );
-  background-size: 100% 4px;
-  pointer-events: none;
-  z-index: 50;
+/* Heading font utility */
+.font-heading {
+  font-family: 'Rajdhani', 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  letter-spacing: -0.02em;
+  font-weight: 700;
 }
 
-/* Heading Typography */
-h1, h2, h3, .font-heading {
-  font-family: 'Rajdhani', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  text-shadow: 0 0 10px rgba(0, 243, 255, 0.5); /* Text Glow */
+/* Slightly bolder subtitles */
+.muted {
+  color: var(--muted);
 }
 
-/* The Neon Card */
+.container {
+  @apply max-w-5xl mx-auto px-6;
+}
+
 .card {
-  background-color: var(--card-bg);
-  border: 1px solid rgba(0, 243, 255, 0.3);
-  backdrop-filter: blur(5px);
-  @apply rounded-none p-6; /* Cyberpunk loves sharp corners */
-  position: relative;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 10px rgba(0, 243, 255, 0.1);
+  background-color: var(--card);
+  border: 1px solid var(--card-border);
+  @apply rounded-xl p-6;
+  transition: transform 220ms cubic-bezier(.2,.9,.2,1), box-shadow 220ms cubic-bezier(.2,.9,.2,1), background-color 220ms ease;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.6);
 }
 
 .card:hover {
-  border-color: var(--neon-pink);
-  box-shadow: 0 0 20px rgba(188, 19, 254, 0.4), inset 0 0 10px rgba(188, 19, 254, 0.2);
-  transform: translateY(-5px);
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 14px 36px rgba(2,6,23,0.7);
 }
 
-/* Helper Class: Text Gradient for Hero */
-.text-gradient {
-  background: linear-gradient(to right, var(--neon-cyan), var(--neon-pink));
-  -webkit-background-clip: text;
-  color: transparent;
-  animation: hue-rotate 3s infinite linear; /* Color shifting animation */
+/* Site header uses CSS variables so it can respond to theme changes */
+.site-header {
+  background-color: var(--header-bg);
+  border-bottom: 1px solid var(--header-border);
 }
 
-/* Helper Class: Neon Buttons */
-.btn-neon {
-  background: transparent;
-  border: 1px solid var(--neon-cyan);
-  color: var(--neon-cyan);
-  text-transform: uppercase;
-  box-shadow: 0 0 5px var(--neon-cyan);
-  transition: 0.3s;
-}
+.site-header a { color: var(--muted); }
+.site-header a:hover { color: var(--text); }
 
-.btn-neon:hover {
-  background: var(--neon-cyan);
-  color: black;
-  box-shadow: 0 0 20px var(--neon-cyan);
-}
-
-/* Keyframes */
-@keyframes hue-rotate {
-  from { filter: hue-rotate(0deg); }
-  to { filter: hue-rotate(360deg); }
+/* Ensure buttons and other elements inherit text color from variables */
+button, a, p, span, h1, h2, h3, h4 {
+  color: inherit;
 }
