@@ -3,8 +3,8 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 export const metadata = {
-  title: 'Developer Portfolio',
-  description: 'Minimal developer portfolio - dark by default'
+  title: 'Subham Kumar | Full-Stack & IoT Developer',
+  description: 'Final Year B.Tech Student & Full-Stack Developer specializing in MERN, PHP, and IoT solutions.'
 }
 
 export default function RootLayout({ children }) {

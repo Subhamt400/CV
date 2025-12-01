@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Download } from 'lucide-react'
-
+import Image from 'next/image'
 export default function Hero() {
   const container = {
     hidden: {},
@@ -22,6 +22,18 @@ export default function Hero() {
         animate="show"
         className="max-w-3xl text-center px-4"
       >
+        <motion.div variants={item} className="flex justify-center mb-6">
+          <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-white/10 shadow-2xl">
+            <Image 
+              src="/images/image.png" 
+              alt="Subham Kumar"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+        </motion.div>
+
         <motion.div variants={item} className="text-sm uppercase tracking-wide muted">Hi, I'm</motion.div>
 
         <motion.h1 variants={item} className="mt-2 text-4xl sm:text-6xl font-heading font-extrabold leading-tight">
