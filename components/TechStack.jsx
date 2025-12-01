@@ -18,17 +18,17 @@ import {
 } from 'react-icons/si'
 
 const skills = [
-  { name: 'HTML', icon: <FaHtml5 size={40} className="text-gray-400" /> },
-  { name: 'CSS', icon: <FaCss3Alt size={40} className="text-gray-400" /> },
-  { name: 'JavaScript', icon: <SiJavascript size={40} className="text-gray-400" /> },
-  { name: 'PHP', icon: <FaPhp size={40} className="text-gray-400" /> },
-  { name: 'MySQL', icon: <SiMysql size={40} className="text-gray-400" /> },
-  { name: 'React', icon: <FaReact size={40} className="text-gray-400" /> },
-  { name: 'Next.js', icon: <SiNextdotjs size={40} className="text-gray-400" /> },
-  { name: 'Node.js', icon: <FaNodeJs size={40} className="text-gray-400" /> },
-  { name: 'Arduino', icon: <SiArduino size={40} className="text-gray-400" /> },
-  { name: 'Python', icon: <FaPython size={40} className="text-gray-400" /> },
-  { name: 'Java', icon: <FaJava size={40} className="text-gray-400" /> }
+  { name: 'HTML', icon: <FaHtml5 size={40} color="#e34c26" /> },
+  { name: 'CSS', icon: <FaCss3Alt size={40} color="#264de4" /> },
+  { name: 'JavaScript', icon: <SiJavascript size={40} color="#f0db4f" /> },
+  { name: 'PHP', icon: <FaPhp size={40} color="#8993be" /> },
+  { name: 'MySQL', icon: <SiMysql size={40} color="#00758f" /> },
+  { name: 'React', icon: <FaReact size={40} color="#61dbfb" /> },
+  { name: 'Next.js', icon: <SiNextdotjs size={40} color="#ffffff" /> },
+  { name: 'Node.js', icon: <FaNodeJs size={40} color="#3c873a" /> },
+  { name: 'Arduino', icon: <SiArduino size={40} color="#00979d" /> },
+  { name: 'Python', icon: <FaPython size={40} color="#306998" /> },
+  { name: 'Java', icon: <FaJava size={40} color="#f89820" /> }
 ]
 
 export default function TechStack(){
