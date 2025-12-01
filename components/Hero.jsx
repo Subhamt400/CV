@@ -15,7 +15,7 @@ export default function Hero() {
   }
 
   return (
-    <section className="pt-7 pb-12 flex items-center justify-center">
+    <section className="pt-5 pb-12 flex items-center justify-center">
       <motion.div
         variants={container}
         initial="hidden"
