@@ -24,7 +24,7 @@ const skills = [
   { name: 'PHP', icon: <FaPhp size={40} color="#8993be" /> },
   { name: 'MySQL', icon: <SiMysql size={40} color="#00758f" /> },
   { name: 'React', icon: <FaReact size={40} color="#61dbfb" /> },
-  { name: 'Next.js', icon: <SiNextdotjs size={40} color="#ffffff" /> },
+  { name: 'Next.js', icon: <SiNextdotjs size={40} color="#000000" /> },
   { name: 'Node.js', icon: <FaNodeJs size={40} color="#3c873a" /> },
   { name: 'Arduino', icon: <SiArduino size={40} color="#00979d" /> },
   { name: 'Python', icon: <FaPython size={40} color="#306998" /> },
