@@ -14,10 +14,10 @@ export default function ProjectCard({ id, title, category, description, techStac
       animate={{ opacity: 1, y: 0, scale: 1 }}
       whileHover={{ y: -6, scale: 1.05 }}
       transition={{ type: 'spring', stiffness: 240, damping: 20, delay: index * 0.08 }}
-      className="card overflow-hidden"
+      className="card overflow-hidden min-h-[360px]"
     >
       {imageSrc && (
-        <div className="w-full h-40 sm:h-44 bg-gradient-to-br from-neutral-800 via-neutral-900 to-neutral-800 overflow-hidden rounded-md relative">
+        <div className="w-full h-48 sm:h-56 bg-gradient-to-br from-neutral-800 via-neutral-900 to-neutral-800 overflow-hidden rounded-md relative">
           <Image src={imageSrc} alt={`${title} cover`} fill className="object-cover" sizes="(max-width: 640px) 100vw, 33vw" />
         </div>
       )}
