@@ -28,7 +28,7 @@ export const projects = [
     techStack: ["PHP", "MySQL", "Bootstrap 5", "ESP8266", "REST API"],
     liveLink: null,
     repoLink: "https://github.com/Subhamt400/ESP-IoT-Monitor",
-    image: "/images/iot-dashboard.png", // Don't forget to add a screenshot here
+    image: "/images/id_3.png", // Don't forget to add a screenshot here
   },
   {
     id: 4,
