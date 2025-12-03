@@ -2,13 +2,13 @@
 export const projects = [
   {
     id: 1,
-    title: "Live E-Commerce/Business Platform",
+    title: "Online Course Platform for Educational Institute",
     category: "Professional Work",
-    description: "A fully functional, live website developed for a client. Built with a custom PHP backend and optimized MySQL database to handle real-time user data and transactions.",
+    description: "A full-stack web platform developed for an educational institute to manage and sell online courses. Features include secure Razorpay payment integration, dynamic course management, user enrollment tracking, and an optimized custom PHP backend with a structured MySQL database.",
     techStack: ["PHP", "MySQL", "JavaScript", "HTML5", "CSS3"],
-    liveLink: "https://your-client-website-1.com", // REPLACE THIS
-    repoLink: null,
-    image: "/images/project1.png",
+    liveLink: "https://houseofchartereds.com", // REPLACE THIS
+    repoLink: "https://github.com/Subhamt400",
+    image: "/images/id_1.png",
   },
   {
     id: 2,
