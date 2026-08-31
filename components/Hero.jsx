@@ -51,7 +51,7 @@ export default function Hero() {
               </a>
 
               <a
-                href="/resume.pdf"
+                href="/assets/CV.pdf"
                 download
                 className="inline-flex items-center px-4 py-3 rounded-md border transition-colors"
                 style={{ borderColor: 'var(--muted)', color: 'var(--text)' }}
