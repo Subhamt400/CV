@@ -5,11 +5,9 @@ import { Sun, Moon } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 export default function ThemeToggle() {
-  // Start with a stable default so server & client initial HTML match (prevents hydration mismatch)
   const [theme, setTheme] = useState('dark')
   const [hydrated, setHydrated] = useState(false)
 
-  // On mount, read the saved preference (or system) and update theme.
   useEffect(() => {
     const saved = localStorage.getItem('theme')
     const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -18,15 +16,14 @@ export default function ThemeToggle() {
     setHydrated(true)
   }, [])
 
-  // Apply theme class and persist whenever it changes after mount
   useEffect(() => {
     const root = window?.document?.documentElement
     if (!root) return
-    // Our CSS defaults to a dark theme (variables set in :root).
-    // We use a `.light` class to switch to the light theme.
     if (theme === 'light') {
       root.classList.add('light')
+      root.classList.remove('dark')
     } else {
+      root.classList.add('dark')
       root.classList.remove('light')
     }
     try {
@@ -50,15 +47,13 @@ export default function ThemeToggle() {
       onClick={toggle}
       onKeyDown={onKeyDown}
       whileTap={{ scale: 0.95 }}
-      className="p-2 rounded-md bg-neutral-800 hover:bg-neutral-700 text-neutral-200"
+      className="p-2 rounded-lg bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 border border-slate-300 dark:border-slate-700 transition-colors"
       aria-label="Toggle color theme"
       title="Toggle color theme"
       role="switch"
       aria-checked={theme === 'dark' ? 'false' : 'true'}
     >
-      {/* Render a stable icon initially (server + first client render) to avoid mismatches.
-          After hydration we show the actual state. */}
-      {hydrated ? (theme === 'light' ? <Sun size={16} /> : <Moon size={16} />) : <Sun size={16} />}
+      {hydrated ? (theme === 'light' ? <Sun size={16} className="text-amber-500" /> : <Moon size={16} className="text-cyan-400" />) : <Sun size={16} />}
     </motion.button>
   )
 }

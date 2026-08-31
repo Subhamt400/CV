@@ -1,70 +1,122 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Rajdhani:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Space+Grotesk:wght@500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
-  /* Dark violet-themed background (default) */
-  --bg: #090418; /* deep base for violet look */
-  --text: #e6eef8;
+  /* Premium Deep Cyber Violet / Slate Dark Theme (default) */
+  --bg: #070913;
+  --bg-gradient-1: rgba(99, 102, 241, 0.15);
+  --bg-gradient-2: rgba(139, 92, 246, 0.12);
+  --bg-gradient-3: rgba(14, 165, 233, 0.08);
+  --grid-color: rgba(255, 255, 255, 0.03);
+  --text: #f1f5f9;
+  --heading: #ffffff;
   --muted: #94a3b8;
-  --card: #0b1220;
-  --card-border: rgba(255,255,255,0.04);
-  --header-bg: rgba(255,255,255,0.03);
-  --header-border: rgba(255,255,255,0.04);
+  --card: rgba(15, 23, 42, 0.75);
+  --card-hover: rgba(30, 41, 59, 0.85);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --card-border-glow: rgba(139, 92, 246, 0.4);
+  --header-bg: rgba(7, 9, 19, 0.85);
+  --header-border: rgba(255, 255, 255, 0.08);
 }
 
-/* `.light` can be used if needed to force a light theme; default stays dark for this portfolio */
 .light {
+  /* High-Contrast Crisp Modern Cyber Light Theme */
   --bg: #f8fafc;
-  --text: #0f1724;
-  --muted: #6b7280;
-  --card: #ffffff;
-  --card-border: rgba(2,6,23,0.06);
-  --header-bg: rgba(2,6,23,0.04);
-  --header-border: rgba(2,6,23,0.06);
+  --bg-gradient-1: rgba(99, 102, 241, 0.07);
+  --bg-gradient-2: rgba(168, 85, 247, 0.06);
+  --bg-gradient-3: rgba(14, 165, 233, 0.05);
+  --grid-color: rgba(0, 0, 0, 0.04);
+  --text: #1e293b;
+  --heading: #0f172a;
+  --muted: #475569;
+  --card: rgba(255, 255, 255, 0.95);
+  --card-hover: rgba(255, 255, 255, 1);
+  --card-border: rgba(0, 0, 0, 0.12);
+  --card-border-glow: rgba(99, 102, 241, 0.4);
+  --header-bg: rgba(248, 250, 252, 0.9);
+  --header-border: rgba(0, 0, 0, 0.08);
 }
 
-html, body, #__next {
-  height: 100%;
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  min-height: 100%;
 }
 
 body {
-  @apply antialiased bg-slate-900 text-slate-100;
+  @apply antialiased;
   background-color: var(--bg);
   color: var(--text);
-  /* layered radial gradients for a premium violet backdrop */
   background-image:
-    radial-gradient(700px 400px at 10% 12%, rgba(99,102,241,0.12), transparent),
-    radial-gradient(900px 500px at 90% 80%, rgba(139,92,246,0.08), transparent),
-    radial-gradient(1200px 600px at 50% 20%, rgba(14,165,233,0.02), transparent);
-  transition: background-color 220ms cubic-bezier(.2,.9,.2,1), color 220ms cubic-bezier(.2,.9,.2,1);
-  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-  font-weight: 400;
+    linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px),
+    radial-gradient(800px 500px at 15% 15%, var(--bg-gradient-1), transparent),
+    radial-gradient(1000px 600px at 85% 75%, var(--bg-gradient-2), transparent),
+    radial-gradient(1200px 700px at 50% 35%, var(--bg-gradient-3), transparent);
+  background-size: 40px 40px, 40px 40px, 100% 100%, 100% 100%, 100% 100%;
+  transition: background-color 220ms ease, color 220ms ease;
+  font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, -apple-system, sans-serif;
 }
 
-/* Hexagonal photo with neon-like glow */
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.6);
+}
+
+/* Cyber Hexagon profile photo frame */
+.hexagon-wrapper {
+  position: relative;
+  width: 270px;
+  height: 270px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hexagon-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: -10px;
+  background: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc);
+  clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);
+  opacity: 0.6;
+  filter: blur(16px);
+  animation: pulse-glow 4s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-glow {
+  0% { transform: scale(0.98); opacity: 0.5; }
+  100% { transform: scale(1.05); opacity: 0.85; }
+}
+
 .hexagon {
-  width: 260px;
-  height: 260px;
+  width: 250px;
+  height: 250px;
   position: relative;
   clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.hexagon::before {
-  content: '';
-  position: absolute;
-  inset: -12px;
-  background: linear-gradient(90deg, rgba(20,184,166,0.12), rgba(124,58,237,0.14));
-  filter: blur(28px);
-  z-index: 0;
-  clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);
+  background-color: var(--card);
 }
 
 .hexagon img {
@@ -76,48 +128,56 @@ body {
 }
 
 @media (max-width: 768px) {
-  .hexagon { width: 200px; height: 200px; }
+  .hexagon-wrapper { width: 210px; height: 210px; }
+  .hexagon { width: 190px; height: 190px; }
 }
 
-/* Heading font utility */
+/* Typography helper classes */
 .font-heading {
-  font-family: 'Rajdhani', 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-  letter-spacing: -0.02em;
+  font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: -0.025em;
   font-weight: 700;
+  color: var(--heading);
 }
 
-/* Slightly bolder subtitles */
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
 .muted {
   color: var(--muted);
 }
 
 .container {
-  @apply max-w-5xl mx-auto px-6;
+  @apply max-w-5xl mx-auto px-4 sm:px-6;
 }
 
-.card {
+/* Modern Cyber Card */
+.glass-card {
   background-color: var(--card);
   border: 1px solid var(--card-border);
-  @apply rounded-xl p-6;
-  transition: transform 220ms cubic-bezier(.2,.9,.2,1), box-shadow 220ms cubic-bezier(.2,.9,.2,1), background-color 220ms ease;
-  box-shadow: 0 6px 18px rgba(2,6,23,0.6);
+  backdrop-filter: blur(12px);
+  @apply rounded-xl transition-all duration-300;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
-.card:hover {
-  transform: translateY(-6px) scale(1.05);
-  box-shadow: 0 14px 36px rgba(2,6,23,0.7);
+.light .glass-card {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
-/* Site header uses CSS variables so it can respond to theme changes */
+.glass-card:hover {
+  background-color: var(--card-hover);
+  border-color: var(--card-border-glow);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.15);
+}
+
 .site-header {
   background-color: var(--header-bg);
   border-bottom: 1px solid var(--header-border);
 }
 
-.site-header a { color: var(--muted); }
-.site-header a:hover { color: var(--text); }
-
-/* Ensure buttons and other elements inherit text color from variables */
-button, a, p, span, h1, h2, h3, h4 {
-  color: inherit;
+/* Mask image class for tech marquee fading edges */
+.marquee-mask {
+  mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
 }

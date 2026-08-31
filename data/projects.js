@@ -1,4 +1,3 @@
-// data/projects.ts
 export const projects = [
   {
     id: 1,
@@ -8,46 +7,56 @@ export const projects = [
     techStack: ["PHP", "MySQL", "JavaScript", "HTML5", "CSS3"],
     liveLink: "https://houseofchartereds.com", // REPLACE THIS
     repoLink: "https://github.com/Subhamt400",
-    image: "/images/id_1.png",
+    image: "/images/online-course-platform.png",
   },
   {
     id: 2,
-    title: "Corporate Portfolio Website",
-    category: "Professional Work",
-    description: "Designed and deployed a responsive corporate website. Focused on SEO optimization and fast load times using vanilla JavaScript and raw CSS.",
-    techStack: ["HTML", "CSS", "JavaScript", "Bootstrap"],
-    liveLink: "https://your-client-website-2.com", // REPLACE THIS
-    repoLink: null,
-    image: "/images/project2.png",
+    title: "AI Travel Planner",
+    category: "AI & Full-Stack",
+    description: "An intelligent travel planning application leveraging AI to generate customized multi-day itineraries, activity recommendations, and budget estimation based on user preferences and destination parameters.",
+    techStack: ["React", "Next.js", "Tailwind CSS", "Gemini API", "Node.js"],
+    liveLink: "https://roam-ai-global.vercel.app", // REPLACE WITH YOUR LINK
+    repoLink: "https://github.com/Subhamt400/ai-travel-planner", // REPLACE WITH YOUR LINK
+    image: "/images/ai-travel-planner.png",
   },
   {
     id: 3,
-    title: "IoT Sensor Dashboard",
-    category: "IoT & Web Development",
-    description: "A full-stack monitoring system for ESP8266 devices. Features a secure PHP backend with authentication, a responsive Bootstrap 5 dashboard, and real-time data visualization.",
-    techStack: ["PHP", "MySQL", "Bootstrap 5", "ESP8266", "REST API"],
-    liveLink: null,
-    repoLink: "https://github.com/Subhamt400/ESP-IoT-Monitor",
-    image: "/images/id_3.png", // Don't forget to add a screenshot here
+    title: "School Website Portal",
+    category: "Full-Stack Web",
+    description: "A modern, responsive educational website built for seamless communication between students, teachers, and administration. Includes dynamic notices, event galleries, and inquiry management.",
+    techStack: ["React", "Next.js", "Tailwind CSS", "Node.js", "Express"],
+    liveLink: "https://goodwill-eosin.vercel.app/", // REPLACE WITH YOUR LINK
+    repoLink: "https://github.com/Subhamt400/school-website", // REPLACE WITH YOUR LINK
+    image: "/images/school-website.png",
   },
   {
     id: 4,
-    title: "ESP8266 Gemini AI Client",
-    category: "AI & Embedded Systems",
-    description: "An AI-powered chatbot running on a microcontroller. Connects directly to Google's Gemini API via HTTPS to answer questions on the Serial Monitor using ArduinoJson.",
-    techStack: ["C++", "Google Gemini API", "ESP8266", "ArduinoJson"],
+    title: "IoT Sensor Dashboard",
+    category: "IoT & Web Development",
+    description: "A full-stack monitoring system for ESP8266 devices. Features a secure PHP backend with authentication, a responsive Bootstrap 5 dashboard, and real-time telemetry data visualization.",
+    techStack: ["PHP", "MySQL", "Bootstrap 5", "ESP8266", "REST API"],
     liveLink: null,
-    repoLink: "https://github.com/Subhamt400/ESPGemini",
-    image: "/images/gemini-client.png", // Don't forget to add a screenshot here
+    repoLink: "https://github.com/Subhamt400/ESP-IoT-Monitor",
+    image: "/images/iot-dashboard.png",
   },
   {
     id: 5,
+    title: "ESP8266 Gemini AI Client",
+    category: "AI & Embedded Systems",
+    description: "An AI-powered chatbot running directly on a microcontroller. Connects to Google's Gemini API via HTTPS to process queries and output intelligent responses using ArduinoJson.",
+    techStack: ["C++", "Google Gemini API", "ESP8266", "ArduinoJson"],
+    liveLink: null,
+    repoLink: "https://github.com/Subhamt400/ESPGemini",
+    image: "/images/gemini-client.png",
+  },
+  {
+    id: 6,
     title: "HTTPS Random Number Fetcher",
     category: "Embedded Systems",
-    description: "A technical demonstration of handling secure HTTPS GET requests on ESP8266. Fetches and parses JSON data from a remote PHP endpoint without heavy libraries.",
+    description: "A technical demonstration of handling secure HTTPS GET requests on ESP8266 microcontrollers. Fetches and parses JSON payloads from remote endpoints without overhead.",
     techStack: ["C++", "ESP8266", "HTTPS", "API Integration"],
     liveLink: null,
     repoLink: "https://github.com/Subhamt400/ESP8266",
-    image: "/images/https-fetcher.png", // Don't forget to add a screenshot here
+    image: "/images/https-fetcher.png",
   }
 ];
